@@ -46,7 +46,7 @@ const Input = React.forwardRef(
                     name={name} 
                     placeholder={placeholder} 
                     onChange={onChange} 
-                    className="flex-grow outline-none" // Estilo básico para o input
+                    className="flex-grow border-none" // Estilo básico para o input
                     {...restProps} 
                 />
                 {suffix}

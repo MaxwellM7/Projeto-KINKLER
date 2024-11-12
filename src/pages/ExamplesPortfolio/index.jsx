@@ -9,7 +9,6 @@ export default function ExamplesPortfolioPage() {
     const [games, setGames] = useState([]);
 
     useEffect(() => {
-        // Recupera jogos armazenados no localStorage ao carregar a página
         const storedGames = JSON.parse(localStorage.getItem("games")) || [];
         setGames(storedGames);
     }, []);
@@ -28,7 +27,6 @@ export default function ExamplesPortfolioPage() {
                 <div className="mt-[100px]">
                     <HeroSection />
                     <PortfolioSection />
-                    {/* Removido a seção de exibição dos jogos */}
                 </div>
                 <Footer className="border-gray-900_11 bg-gray-900_10" />
             </div>

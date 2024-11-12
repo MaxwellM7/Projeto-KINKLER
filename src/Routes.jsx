@@ -2,21 +2,30 @@ import React from "react";
 import { useRoutes } from "react-router-dom";
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
-import ExamplesPortfolio from './pages/ExamplesPortfolio'; // Sem .jsx no final
+import ExamplesPortfolio from './pages/ExamplesPortfolio';
 import ExamplesPortfolioOne from './pages/ExamplesPortfolioOne';
-
+import LoginPage from "./pages/Login/LoginPage";
+import RegisterPage from "./pages/Registro/RegisterPage";
 
 const ProjectRoutes = () => {
     let element = useRoutes([
         { path: "/", element: <Home /> },
         { path: "*", element: <NotFound /> },
         {
-            path: "examplesportfolio",
+            path: "/examplesportfolio",
             element: <ExamplesPortfolio />,
         },
         {
-            path: "examplesportfolioone",
-            element: <ExamplesPortfolioOne />
+            path: "/examplesportfolioone",
+            element: <ExamplesPortfolioOne />,
+        },
+        {
+            path: "/login",
+            element: <LoginPage />,
+        },
+        {
+            path: "/registro",
+            element: <RegisterPage />,
         },
     ]);
 

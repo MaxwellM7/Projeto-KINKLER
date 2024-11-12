@@ -1,6 +1,6 @@
 import { Text, Img } from "./..";
 import React from "react";
-import { Link } from "react-router-dom"; // Importando o Link do React Router
+import { Link } from "react-router-dom";
 
 export default function Header({ ...props }) {
     return (
@@ -10,7 +10,7 @@ export default function Header({ ...props }) {
         >
             <div className="container-xs flex items-center justify-between gap-5 px-2 md:px-5 sm:flex-col">
                 <div className="flex items-center gap-6">
-                    <Link to="/"> {/* Link para a página inicial, se necessário */}
+                    <Link to="/">
                         <Img src="/assets/images/img_television.svg" alt="Television Image" className="h-[34px]" />
                     </Link>
                     <Text
@@ -21,45 +21,37 @@ export default function Header({ ...props }) {
                         KINKLER
                     </Text>
                 </div>
-                <ul className="!mr-2 flex flex-wrap items-center gap-12 md:mr-0">
+                <ul className="!mr-2 flex flex-wrap items-center gap-6 md:mr-0">
                     <li>
-                        <Link to="/examplesportfolioone" className="cursor-pointer"> {/* Link para a página de envio de jogos */}
+                        <Link to="/examplesportfolioone" className="cursor-pointer">
                             <Text
                                 size="single_line_body_base"
                                 as="p"
-                                className="px-5 py-1 text-[16px] font-normal text-gray-100_01 hover:rounded-lg hover:bg-gray-300"
+                                className="px-4 py-1.5 text-[16px] font-normal text-gray-100_01 rounded hover:bg-gray-700 hover:text-white transition"
                             >
                                 Enviar Jogos
                             </Text>
                         </Link>
                     </li>
                     <li>
-                        <a
-                            href="#"
-                            className="flex cursor-pointer items-center justify-center rounded-lg border border-solid border-gray-600_01 bg-gray-300"
+                        <Link
+                            to="/login"
+                            className="flex cursor-pointer items-center justify-center rounded-lg bg-[#6b21a8] px-4 py-1.5 text-gray-100 hover:bg-[#5a1e91] transition"
                         >
-                            <Text
-                                size="single_line_body_base"
-                                as="p"
-                                className="px-5 py-1 text-[16px] font-normal text-gray-900_05 hover:text-gray-100_01"
-                            >
+                            <Text size="single_line_body_base" as="p" className="text-[16px] font-normal">
                                 Login
                             </Text>
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a
-                            href="#"
-                            className="flex cursor-pointer items-center justify-center rounded-lg border border-solid border-blue_gray-900_01 bg-blue"
+                        <Link
+                            to="/registro"
+                            className="flex cursor-pointer items-center justify-center rounded-lg border border-gray-500 px-4 py-1.5 text-black transition hover:bg-[#6b21a8] hover:text-white"
                         >
-                            <Text
-                                size="single_line_body_base"
-                                as="p"
-                                className="px-1.5 py-1 text-[16px] font-normal hover:bg-gray-300 hover:text-gray-100_01"
-                            >
+                            <Text size="single_line_body_base" as="p" className="text-[16px] font-normal">
                                 Registrar
                             </Text>
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>
